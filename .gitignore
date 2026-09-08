@@ -1,0 +1,23 @@
+# Node / SvelteKit
+node_modules/
+frontend/.svelte-kit/
+frontend/build/
+frontend/.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Données locales
+# NB: backend/race_engineer/race_engineer_history.sqlite reste suivi (historique existant)
+*.sqlite
+*.sqlite3
+*.db
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

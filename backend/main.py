@@ -14,12 +14,10 @@ import os
 import time
 
 # ---------------------------------------------------------------------------
-# Ajouter le répertoire race_engineer au path Python
-# Structure : race_engineer_svelte/backend/ → ../../race_engineer/
+# Ajouter le répertoire contenant le package race_engineer au path Python
+# Structure : backend/race_engineer/race_engineer/  (package)
 # ---------------------------------------------------------------------------
-_RE_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "race_engineer")
-)
+_RE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "race_engineer"))
 if _RE_PATH not in sys.path:
     sys.path.insert(0, _RE_PATH)
 
