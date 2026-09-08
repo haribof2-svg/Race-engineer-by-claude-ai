@@ -218,18 +218,18 @@
 
         <!-- Graphique évolution -->
         {#if s.raw_lap_secs?.length > 0}
-          {@const data = s.raw_lap_secs}
-          {@const minV = Math.min(...data)}
-          {@const maxV = Math.max(...data)}
-          {@const range = maxV - minV || 1}
-          {@const W = 800}
-          {@const H = 220}
-          {@const stepX = data.length > 1 ? W / (data.length - 1) : 0}
-          {@const meanV = s.mean_lap}
-          {@const meanY = meanV != null ? H - ((meanV - minV) / range) * H : null}
           <div>
             <p class="text-xs uppercase tracking-widest text-f1-muted mb-2">📈 Évolution des temps au tour ({s.raw_lap_secs.length} tours)</p>
             <div class="card p-4">
+              {@const data = s.raw_lap_secs}
+              {@const minV = Math.min(...data)}
+              {@const maxV = Math.max(...data)}
+              {@const range = maxV - minV || 1}
+              {@const W = 800}
+              {@const H = 220}
+              {@const stepX = data.length > 1 ? W / (data.length - 1) : 0}
+              {@const meanV = s.mean_lap}
+              {@const meanY = meanV != null ? H - ((meanV - minV) / range) * H : null}
               <svg viewBox="0 0 {W} {H}" class="w-full h-auto" preserveAspectRatio="none">
                 <!-- Ligne moyenne -->
                 {#if meanY != null}

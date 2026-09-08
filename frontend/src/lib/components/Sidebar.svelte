@@ -16,9 +16,6 @@
   ];
 
   $: currentPath = $page?.url?.pathname || '/';
-
-  // Marqueur de build : sert à vérifier quelle version est réellement déployée.
-  const BUILD_MARKER = '2026-09-08-A';
 </script>
 
 <aside class="flex flex-col h-full bg-f1-surface border-r border-f1-border w-56 shrink-0">
@@ -62,13 +59,8 @@
   </nav>
 
   <!-- Footer -->
-  <div class="px-4 py-3 border-t border-f1-border">
-    <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full {$connected ? 'bg-f1-green' : 'bg-f1-red'} shrink-0"></span>
-      <span class="text-xs text-f1-muted">{$connected ? 'Connecté' : 'Déconnecté'}</span>
-    </div>
-    <div class="text-[10px] text-f1-muted/70 font-mono mt-1.5 tracking-wider">
-      build {BUILD_MARKER}
-    </div>
+  <div class="px-4 py-3 border-t border-f1-border flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full {$connected ? 'bg-f1-green' : 'bg-f1-red'} shrink-0"></span>
+    <span class="text-xs text-f1-muted">{$connected ? 'Connecté' : 'Déconnecté'}</span>
   </div>
 </aside>
