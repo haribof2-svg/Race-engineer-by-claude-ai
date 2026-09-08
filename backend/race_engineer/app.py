@@ -89,6 +89,7 @@ with st.sidebar:
         f"Moto n°{config.get('our_bike_number', '96')} — "
         f"Catégorie {config.get('our_category', 'PRD')}"
     )
+    st.caption("build 2026-09-08-A")
     st.divider()
 
     PAGES = {
